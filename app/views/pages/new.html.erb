@@ -1,0 +1,7 @@
+<h2>New Person:</h2>
+
+<%= form_for @person do |f| %>
+    <p><%= f.text_field :name, placeholder: "Name" %></p>
+    <p><%= f.number_field :age %></p>
+    <p><%= f.submit "Create Person" %></p>
+<% end %>

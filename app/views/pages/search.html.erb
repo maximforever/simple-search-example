@@ -1,0 +1,20 @@
+<h2>Search</h2>
+
+<%= form_tag(search_path, controller: "pages", action: "search", method: "get") do %>
+    <%= text_field_tag :search, params[:search_path] %>
+<!--                    #name   #whatever goes into the text field -->
+    <p><%= submit_tag "Search for user", name: nil %></p>
+
+    <br>
+
+    <% if !@people.nil? %>
+    <h3>People found:</h3>
+        <% @people.each do |p| %>    
+        <p>
+        <%= p.name %>, <%= p.age %>.
+        </p>
+        <% end %>
+    <% end %>
+
+
+<% end %>
