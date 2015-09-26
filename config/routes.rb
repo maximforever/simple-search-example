@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/new' => 'pages#new', as: :new_person
   post '/people' => 'pages#create'
   get '/search' => 'pages#search'
+  get '/find' => 'pages#find'
 
 
 

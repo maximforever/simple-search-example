@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   end
 
   def search
+  end
+
+  def find
     if(params[:search])
       @people = Person.search_me(params[:search])  
     end
